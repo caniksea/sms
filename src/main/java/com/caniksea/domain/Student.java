@@ -1,8 +1,9 @@
 package com.caniksea.domain;
 
+import java.util.Objects;
 import java.util.Set;
 
-public class Student {
+public class Student implements  Comparable<Student> {
 
     private String studentId, studentFirstName, studentLastName;
     private int age;
@@ -33,6 +34,11 @@ public class Student {
         return age;
     }
 
+    @Override
+    public int compareTo(Student o) {
+        return this.studentId.compareTo(o.studentId);
+    }
+
     public static class Builder {
 
         private String studentId, studentFirstName, studentLastName;
@@ -59,6 +65,13 @@ public class Student {
             return this;
         }
 
+        public Builder Copy(Student student) {
+            this.studentId = student.studentId;
+            this.studentLastName = student.studentLastName;
+
+            return this;
+        }
+
         public Student build() {
             return new Student(this);
         }
@@ -73,5 +86,18 @@ public class Student {
                 ", StudentLastName='" + studentLastName + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return studentId.equals(student.studentId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(studentId);
     }
 }
