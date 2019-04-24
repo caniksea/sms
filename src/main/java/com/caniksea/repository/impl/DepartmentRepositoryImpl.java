@@ -40,7 +40,9 @@ public class DepartmentRepositoryImpl implements DepartmentRepository {
     }
 
     public Set<Department> getAll(){
-        //return all the departments in your store
-        return null;
+
+
+
+        return this.departments;
     }
 }
