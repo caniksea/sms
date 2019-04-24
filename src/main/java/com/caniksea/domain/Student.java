@@ -3,7 +3,7 @@ package com.caniksea.domain;
 import java.util.Objects;
 import java.util.Set;
 
-public class Student implements  Comparable<Student> {
+public class Student {
 
     private String studentId, studentFirstName, studentLastName;
     private int age;
@@ -34,10 +34,10 @@ public class Student implements  Comparable<Student> {
         return age;
     }
 
-    @Override
-    public int compareTo(Student o) {
-        return this.studentId.compareTo(o.studentId);
-    }
+//    @Override
+//    public int compareTo(Student o) {
+//        return this.studentId.compareTo(o.studentId);
+//    }
 
     public static class Builder {
 
@@ -65,12 +65,14 @@ public class Student implements  Comparable<Student> {
             return this;
         }
 
-        public Builder Copy(Student student) {
-            this.studentId = student.studentId;
-            this.studentLastName = student.studentLastName;
-
-            return this;
-        }
+//        public Builder copy(Student student) {
+//            this.studentId = student.studentId;
+//            this.studentFirstName = student.studentFirstName;
+//            this.studentLastName = student.studentLastName;
+//            this.age = student.age;
+//
+//            return this;
+//        }
 
         public Student build() {
             return new Student(this);
