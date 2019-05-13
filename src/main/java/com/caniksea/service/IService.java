@@ -1,8 +1,11 @@
 package com.caniksea.service;
 
-public interface IService<TYPE, ID> {
-    TYPE create(TYPE type);
-    TYPE update(TYPE type);
+public interface IService<T, ID> {
+    T create(T type);
+
+    T update(T type);
+
     void delete(ID id);
-    TYPE read(ID id);
+
+    T read(ID id);
 }

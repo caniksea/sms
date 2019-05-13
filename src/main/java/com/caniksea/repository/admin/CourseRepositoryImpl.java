@@ -1,7 +1,6 @@
-package com.caniksea.repository.admin.impl;
+package com.caniksea.repository.admin;
 
 import com.caniksea.domain.admin.Course;
-import com.caniksea.repository.admin.CourseRepository;
 
 import java.util.HashSet;
 import java.util.Set;

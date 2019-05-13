@@ -1,7 +1,6 @@
-package com.caniksea.repository.admin.impl;
+package com.caniksea.repository.admin;
 
 import com.caniksea.domain.admin.Department;
-import com.caniksea.repository.admin.DepartmentRepository;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -40,7 +39,6 @@ public class DepartmentRepositoryImpl implements DepartmentRepository {
     }
 
     public Set<Department> getAll(){
-
 
 
         return this.departments;

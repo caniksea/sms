@@ -1,8 +1,7 @@
-package com.caniksea.repository.admin.impl;
+package com.caniksea.repository.admin;
 
 import com.caniksea.domain.admin.Course;
 import com.caniksea.factory.admin.CourseFactory;
-import com.caniksea.repository.admin.CourseRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
@@ -10,8 +9,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import java.util.Set;
-
-import static org.junit.Assert.*;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CourseRepositoryImplTest {
