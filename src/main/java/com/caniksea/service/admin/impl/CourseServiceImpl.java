@@ -2,7 +2,7 @@ package com.caniksea.service.admin.impl;
 
 import com.caniksea.domain.admin.Course;
 import com.caniksea.repository.admin.CourseRepository;
-import com.caniksea.repository.admin.CourseRepositoryImpl;
+import com.caniksea.repository.admin.impl.CourseRepositoryImpl;
 import com.caniksea.service.admin.CourseService;
 import org.springframework.stereotype.Service;
 

@@ -2,6 +2,7 @@ package com.caniksea.repository.admin;
 
 import com.caniksea.domain.admin.Course;
 import com.caniksea.factory.admin.CourseFactory;
+import com.caniksea.repository.admin.impl.CourseRepositoryImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
