@@ -4,6 +4,7 @@ package com.caniksea.controller.people;
 import com.caniksea.domain.people.Student;
 import com.caniksea.service.people.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
@@ -12,6 +13,7 @@ import java.util.Set;
 @RequestMapping("/student")
 public class StudentController {
     @Autowired
+    @Qualifier("ServiceImpl")
     private StudentService service;
 
     @PostMapping("/create")
