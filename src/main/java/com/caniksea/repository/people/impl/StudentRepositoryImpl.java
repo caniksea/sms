@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Repository
+@Repository("InMemory")
 public class StudentRepositoryImpl implements StudentRepository {
 
     private static StudentRepositoryImpl repository = null;

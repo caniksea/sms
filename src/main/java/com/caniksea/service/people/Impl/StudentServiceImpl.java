@@ -5,13 +5,15 @@ import com.caniksea.domain.people.Student;
 import com.caniksea.repository.people.StudentRepository;
 import com.caniksea.service.people.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("ServiceImpl")
 public class StudentServiceImpl  implements StudentService {
     @Autowired
+    @Qualifier("InMemory")
     private StudentRepository repository;
 
     @Override
